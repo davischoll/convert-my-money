@@ -1,0 +1,21 @@
+<%- include('header') %>
+
+<div class="containerResult">
+  <div class="boxResult">
+    <h1>Cotação</h1>
+
+    <% if(error) { %>
+    <p>
+      <strong class="textRed"><%= error %></strong>
+    </p>
+    <% } else { %>
+    <p>
+    <p>Quantidade em US$: <strong class="textBlue"><%= quantidade %></strong></p>
+    <p>Cotação em R$: <strong class="textBlue"><%= cotacao %></strong> </p>
+    <p>Total R$: <strong class="textGreen"><%= conversao %> </strong></p>
+    </p>
+    <% } %>
+  </div>
+</div>
+
+<%- include('footer') %>
