@@ -34,7 +34,7 @@ app.get('/cotacao', (req, res) => {
   }
 })
 
-app.listen(3000, err => {
+app.listen(3000 || process.env.PORT, err => {
   if (err) {
     console.log('Não foi possível iniciar')
   } else {
