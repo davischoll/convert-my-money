@@ -1,18 +1,44 @@
-body{
-  text-align: center;
+#logo {
+  width: 350px;
+  margin: 40px;
 }
 
-h1 img{
-  width: 489px;
-  margin: 20px;
+body{
+  font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  width: 90vw;  /* width = largura */
+  max-width: 700px;  /* Tamanho máximo da div #container  */
+}
+
+@media (min-width: 700px) {
+  #logo {
+    width: 600px;
+  }
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-block label {
+  font-family: Poppins;
+  color: gray;
+  margin-top: .8rem;
 }
 
 input{
   border: 1px solid #68b465;
   background: #fdfdfd;
-  font-size: 16px;
-  padding: 10px;
-  margin: 8px;
+  margin-top: .4rem;
+  padding: 10px;  
   border-radius: 8px;
 }
 
@@ -23,13 +49,12 @@ input:focus{
 button{
   border: none;
   background: #68b465;
-  font-size: 18px;
   padding: 10px;
-  margin: 8px;
+  margin-top: .8rem;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;  
   color:#fdfdfd;
+  font-family: Poppins;
 }
 
 button:hover{

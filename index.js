@@ -16,7 +16,6 @@ app.get('/', async(req, res) => {
   })
 })
 
-
 app.get('/cotacao', (req, res) => {
   const { cotacao, quantidade } = req.query
   if (cotacao && quantidade) {
@@ -26,7 +25,7 @@ app.get('/cotacao', (req, res) => {
       cotacao: convert.toMoney(cotacao),
       quantidade: convert.toMoney(quantidade),
       conversao: convert.toMoney(conversao)
-    })
+    })    
   } else {
     res.render('cotacao', {
       error: 'Valores inválidos'

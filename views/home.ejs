@@ -1,7 +1,21 @@
 <%- include('header') %>
-<form method="GET" action="/cotacao">
-  <input name="cotacao" placeholder="Cotação dólar em R$" value="<%= cotacao %>"><br>
-  <input name="quantidade" placeholder="Quantidade de dólares"><br>
-  <button>Converter!</button>
-</form>
+
+  <div id="container">
+    <form method="GET" action="/cotacao">
+
+      <div class="input-block">
+        <label for="cotacaoRS">Cotação do Dólar em Reais (R$)</label>
+        <input name="cotacao" id="cotacaoRS" value="<%= cotacao %>" required><br>
+      </div>
+
+      <div class="input-block">
+        <label for="quantidadeSS">Quantidade em Dólar (US$)</label>
+        <input name="quantidade" id="quantidadeSS" required><br>
+      </div>
+
+      <button>Converter!</button>
+
+    </form>
+  </div>
+
 <%- include('footer') %>
